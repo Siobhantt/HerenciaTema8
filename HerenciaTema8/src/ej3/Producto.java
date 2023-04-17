@@ -25,7 +25,14 @@ public void setPrecio(double precio) {
 //=================TO STRING====================
 @Override
 public String toString() {
-	return "Producto:" + nombre + " \nPrecio=" + precio;
+	return "Producto:" + this.nombre + " \nPrecio=" + this.precio;
+}
+
+//=====Calcular
+public double	 calcular(int cantidad) {
+	double res;
+	res = this.precio * cantidad;
+	return res;
 }
 
 }

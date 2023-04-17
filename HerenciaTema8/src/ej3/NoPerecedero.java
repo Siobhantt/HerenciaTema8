@@ -17,7 +17,15 @@ public void setTipo(String tipo) {
 //=================TO STRING====================
 @Override
 public String toString() {
-	return super.toString() + "\nTipo:" + tipo;
+	return super.toString() + "\nTipo:" + this.tipo;
 }
+/**
+public double	 calcular(int cantidad) {
+	double res;
+	// 
+	res = super.calcular(cantidad);
+	return res;
 
+}
+*/
 }
