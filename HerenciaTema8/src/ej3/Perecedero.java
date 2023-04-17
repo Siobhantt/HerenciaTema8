@@ -14,6 +14,10 @@ public int getDiasaCaducar() {
 public void setDiasaCaducar(int diasaCaducar) {
 	this.diasaCaducar = diasaCaducar;
 }
-
+//=================TO STRING====================
+@Override
+public String toString() {
+	return super.toString() + "\nDias para caducar: " + diasaCaducar;
+}
 
 }

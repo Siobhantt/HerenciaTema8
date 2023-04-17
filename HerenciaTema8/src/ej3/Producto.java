@@ -22,5 +22,10 @@ public double getPrecio() {
 public void setPrecio(double precio) {
 	this.precio = precio;
 }
+//=================TO STRING====================
+@Override
+public String toString() {
+	return "Producto:" + nombre + " \nPrecio=" + precio;
+}
 
 }

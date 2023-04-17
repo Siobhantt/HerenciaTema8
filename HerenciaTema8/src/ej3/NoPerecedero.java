@@ -14,5 +14,10 @@ public String getTipo() {
 public void setTipo(String tipo) {
 	this.tipo = tipo;
 }
+//=================TO STRING====================
+@Override
+public String toString() {
+	return super.toString() + "\nTipo:" + tipo;
+}
 
 }
