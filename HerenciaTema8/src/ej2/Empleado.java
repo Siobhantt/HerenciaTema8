@@ -8,7 +8,6 @@ public Empleado() {
 }
 
 public Empleado(String nombre) {
-	super();
 	this.nombre = nombre;
 }
 
