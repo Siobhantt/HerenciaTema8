@@ -2,9 +2,12 @@ package ej2;
 
 public class Operario extends Empleado {
 
+	public Operario() {
+		super();
+	}
 	@Override
 	public String toString() {
-		return getClass() +" " +  super.toString() +"->" + getClass();
+		return  super.toString() +"->" + getClass();
 	}
 
 }
