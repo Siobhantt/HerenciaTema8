@@ -1,12 +1,13 @@
 package ej2;
 
 public class Empleado {
+	//Clase padre empleado que tiene atributo nombre
 private String nombre;
 
-public Empleado() {
-	
-}
-
+/**
+ * Constructor con parametros
+ * @param nombre
+ */
 public Empleado(String nombre) {
 	this.nombre = nombre;
 }
