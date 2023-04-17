@@ -4,4 +4,8 @@ public class Tecnico extends Operario {
 public Tecnico() {
 	
 }
+@Override
+public String toString() {
+	return  super.toString() +"-> Tecnico";
+}
 }
