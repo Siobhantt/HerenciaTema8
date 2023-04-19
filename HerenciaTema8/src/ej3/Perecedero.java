@@ -20,7 +20,7 @@ public String toString() {
 	return super.toString() + "\nDias para caducar: " + this.diasaCaducar;
 }
 //======Calcular
-public double calcular1(int cantidad) {
+public double calcular(int cantidad) {
 	double precio=0;
 	//Utilizamos la funcion calcular heredandola del padre y usamos la cantidad pasada por parametro
 	precio = super.calcular(cantidad);
