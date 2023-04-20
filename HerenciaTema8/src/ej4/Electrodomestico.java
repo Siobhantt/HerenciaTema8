@@ -25,13 +25,13 @@ public class Electrodomestico {
 	}
 
 	public Electrodomestico(double precioBase, double peso) {
-		super();
 		this.precioBase = precioBase;
 		this.peso = peso;
+		this.color = Color.blanco;
+		this.consumo = Consumo.F;
 	}
 
 	public Electrodomestico(double precioBase, double peso, String color, char consumo) {
-		super();
 		this.precioBase = precioBase;
 		this.peso = peso;
 		compruebaColor(color);
@@ -100,7 +100,7 @@ public class Electrodomestico {
 		double precioF = 0;
 		switch (this.consumo) {
 		case A:
-			precioF = this.precioBase + 100;
+			precioF = this.precioBase += 100;
 			break;
 		case B:
 			precioF = this.precioBase += 80;
@@ -129,4 +129,11 @@ public class Electrodomestico {
 
 		return precioF;
 	}// fin del metodo
+
+	@Override
+	public String toString() {
+		return "Electrodomestico: \n" + "Precio base= " + this.precioBase + "\nPeso= " + this.peso + "\nColor: " + this.color + "\nConsumo: " + this.consumo;
+	
+	}
+	
 }

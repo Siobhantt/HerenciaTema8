@@ -6,14 +6,18 @@ public class Television extends Electrodomestico {
 
 	public Television() {
 		super();
+		this.resolucion = 20;
+		this.sintonizador = false;
 	}
 
 	public Television(double precio, double peso) {
 		super(precio, peso);
+		this.resolucion = 20;
+		this.sintonizador = false;
 	}
 
-	public Television(double precio, double peso, double resolucion, boolean sintonizador) {
-		super(precio, peso);
+	public Television(double precio, double peso, double resolucion, boolean sintonizador, String color, char consumo) {
+		super(precio, peso,color, consumo);
 		this.resolucion = resolucion;
 		this.sintonizador = sintonizador;
 	}
@@ -35,6 +39,11 @@ public class Television extends Electrodomestico {
 			precioF = super.precioFinal() + 50;
 		}
 		return precioF;
+	}
+
+	@Override
+	public String toString() {
+		return super.toString() + "\nTelevision" + "\nResolucion= " + this.resolucion + "\nSintonizador " + this.isSintonizador();
 	}
 
 }
