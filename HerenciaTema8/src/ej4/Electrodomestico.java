@@ -132,8 +132,12 @@ public class Electrodomestico {
 
 	@Override
 	public String toString() {
-		return "Electrodomestico: \n" + "Precio base= " + this.precioBase + "\nPeso= " + this.peso + "\nColor: " + this.color + "\nConsumo: " + this.consumo;
-	
+		String res="";
+		res += "Electrodomestico: \n" +
+				"Precio base= " + this.precioBase + "\n"+
+				"Peso= " + this.peso + "\n" +
+				"Color: " + this.color + "\n" + 
+				"Consumo: " + this.consumo + "\n";
+		return res;
 	}
-	
 }

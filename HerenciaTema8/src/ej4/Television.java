@@ -43,7 +43,11 @@ public class Television extends Electrodomestico {
 
 	@Override
 	public String toString() {
-		return super.toString() + "\nTelevision" + "\nResolucion= " + this.resolucion + "\nSintonizador " + this.isSintonizador();
+		return super.toString() + 
+				"=========================================\n"
+				+"Tipo: Television\n" + 
+				"Resolucion= " + this.resolucion + "\n" +
+				"Sintonizador " + this.isSintonizador() + "\n";
 	}
 
 }

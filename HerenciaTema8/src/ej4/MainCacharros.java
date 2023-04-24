@@ -7,8 +7,13 @@ public class MainCacharros {
 	static Electrodomestico[] arrayCacharros = new Electrodomestico[10];
 
 	public static void main(String[] args) {
-		double precioF;
-		double precioB;
+		double precioF=0;
+		double precioB=0;
+		
+		double totalElectrodomesticos=0;
+		double totalLavadora=0;
+		double totalTelevision=0;
+		
 		Electrodomestico a1 = new Electrodomestico(50, 10, "gris", 'A');
 		Electrodomestico a2 = new Electrodomestico(500, 30);
 		Electrodomestico a3 = new Electrodomestico();
@@ -39,11 +44,24 @@ public class MainCacharros {
 			precioB = arrayCacharros[i].precioBase;
 			precioF = arrayCacharros[i].precioFinal();
 			System.out.println(arrayCacharros[i]);
-			System.out.println();
-			System.out.println("El precio final con las restricciones aplicada es = "+precioF);
+			System.out.println("El precio base es: " + precioB);
+			System.out.println("El precio final con las restricciones aplicadas es: "+precioF);
 			System.out.println();
 		}
 		
+		
+		for(int i=0;i<arrayCacharros.length;i++) {
+			totalElectrodomesticos += arrayCacharros[i].precioFinal();
+			
+			 if (arrayCacharros[i] instanceof Lavadora) {
+				totalLavadora += arrayCacharros[i].precioFinal();
+			} else if(arrayCacharros[i] instanceof Television) {
+				totalTelevision += arrayCacharros[i].precioFinal();
+			}
+		}
+		
+		System.out.println("El total de todos los electrodomesticos es: " + totalElectrodomesticos);
+		System.out.println("El total de todos las Lavadoras es: " + totalLavadora);
+		System.out.println("El total de todos los Televisores es: " + totalTelevision);
 	}
-
 }
