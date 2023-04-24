@@ -63,5 +63,6 @@ public class MainCacharros {
 		System.out.println("El total de todos los electrodomesticos es: " + totalElectrodomesticos);
 		System.out.println("El total de todos las Lavadoras es: " + totalLavadora);
 		System.out.println("El total de todos los Televisores es: " + totalTelevision);
+		
 	}
 }
