@@ -26,6 +26,7 @@ public class MainPoligono {
 				System.out.println("Adios programa.");
 				break;	
 			default:
+				System.err.println("Opcion no contemplada.");
 				break;
 			}
 		}while(opcionUser!=4);
@@ -59,7 +60,7 @@ public class MainPoligono {
 		System.out.println("Ha insertado un triangulo en el array.");
 		System.out.println();
 	}
-	
+
 	public static void rectangulo() {
 		int cantLados=4;
 		double base;
