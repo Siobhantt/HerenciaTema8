@@ -36,8 +36,11 @@ public void setLado3(double lado3) {
 }
 
 public double area() {
+	double semiperimetro=0;
 	double area=0;
-	area = (lado1 + lado2 + lado3)/2;
+	semiperimetro = (lado1 + lado2 + lado3)/2;
+	area = semiperimetro*(semiperimetro-lado1)*(semiperimetro-lado2)*(semiperimetro-lado3);
+	area = Math.sqrt(area);
 	return area;
 }
 
