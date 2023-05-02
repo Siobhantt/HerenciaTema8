@@ -1,36 +1,63 @@
 package ej4;
-
+/**
+ * Clase que representa un electrodomestico
+ * @author Luisa
+ *
+ */
 public class Electrodomestico {
-	// ==================Atributos======================
+	/**
+	 * Precio base(sin modificaciones) del electrodomestico
+	 */
 	public double precioBase;
+	/**
+	 * Peso del electrodomestico
+	 */
 	public double peso;
+	/**
+	 * Atributo de Enumerado Color
+	 */
 	public Color color;
+	/**
+	 * Atributo de Enumerado Consumo
+	 */
 	public Consumo consumo;
 
-	// ==================Enumerados======================
+	/**
+	 * Enumerado Color
+	 */
 	public enum Color {
 		blanco, negro, rojo, azul, gris
 	}
-
+	/**
+	 * Enumerado Consumo
+	 */
 	public enum Consumo {
 		A, B, C, D, E, F
 	}
 
-	// ==================Constructores======================
+	/**
+	 * Contructor sin parametros(Establece ciertos parametros por defecto)
+	 */
 	public Electrodomestico() {
 		this.color = Color.blanco;
 		this.consumo = Consumo.F;
 		this.precioBase = 100;
 		this.peso = 5;
 	}
-
+/**
+ * Constructor con (2) parametros
+ * @param precioBase
+ * @param peso
+ */
 	public Electrodomestico(double precioBase, double peso) {
 		this.precioBase = precioBase;
 		this.peso = peso;
 		this.color = Color.blanco;
 		this.consumo = Consumo.F;
 	}
-
+/*
+ * Constructor con todos los parametros
+ */
 	public Electrodomestico(double precioBase, double peso, String color, char consumo) {
 		this.precioBase = precioBase;
 		this.peso = peso;
@@ -38,40 +65,67 @@ public class Electrodomestico {
 		comprobarConsumoEnergetico(consumo);
 	}
 
-	// ==================GETTERS AND SETTERS======================
+	/**
+	 * Obtiene el precio base del electrodomestico
+	 * @return
+	 */
 	public double getPrecioBase() {
 		return precioBase;
 	}
-
+/**
+ * establece el precio base del electrodomestico
+ * @param precioBase
+ */
 	public void setPrecioBase(double precioBase) {
 		this.precioBase = precioBase;
 	}
-
+/**
+ * Obtiene el peso
+ * @return
+ */
 	public double getPeso() {
 		return peso;
 	}
-
+/**
+ * establece el peso
+ * @param peso
+ */
 	public void setPeso(double peso) {
 		this.peso = peso;
 	}
-
+/**
+ * obtiene el color
+ * @return
+ */
 	public Color getColor() {
 		return color;
 	}
-
+/**
+ * establece el color
+ * @param color
+ */
 	public void setColor(Color color) {
 		this.color = color;
 	}
-
+/**
+ * Obtiene el consumo
+ * @return
+ */
 	public Consumo getConsumo() {
 		return consumo;
 	}
-
+/**
+ * Establece el consumo
+ * @param consumo
+ */
 	public void setConsumo(Consumo consumo) {
 		this.consumo = consumo;
 	}
 
-	// ==================Metodos======================
+	/**
+	 * Comprueba que el atributo de consumo este en los valores valorados
+	 * @param letra
+	 */
 	private void comprobarConsumoEnergetico(char letra) {
 		// Si el consumo esta entre las letras consideradas establesco MI consumo a la
 		// letra que me han pasado por parametros
@@ -83,7 +137,10 @@ public class Electrodomestico {
 			this.consumo = Consumo.F;
 		}
 	}
-
+/**
+ * Comprueba que el color introducido este entre los valores comprendidos en el enumerado
+ * @param color
+ */
 	private void compruebaColor(String color) {
 		// si el color esta entre los validos establezco mi atributo(el de la clase) a
 		// lo que me pasan por parametro,
@@ -96,6 +153,10 @@ public class Electrodomestico {
 		}
 	}// fin del metodo
 
+/**
+ * Metodo que devuelve el precio final del electrodomestico con las restricciones aplicadas
+ * @return
+ */
 	public double precioFinal() {
 		double precioF = 0;
 		switch (this.consumo) {
@@ -130,6 +191,9 @@ public class Electrodomestico {
 		return precioF;
 	}// fin del metodo
 
+	/**
+	 * Metodo que muestra todas las caracteristicas del electrodomestico
+	 */
 	@Override
 	public String toString() {
 		String res="";
