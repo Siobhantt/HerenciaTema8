@@ -1,14 +1,23 @@
 package ej1;
-
+/**
+ * Clase que representa la hora, con atributos de hora y minutos
+ * @author Luisa
+ *
+ */
 public class Hora {
+	/**
+	 * Atributo de hora
+	 */
 	protected int hora;
+	/**
+	 * Atributo de minuto
+	 */
 	protected int minuto;
 	/**
-	 * S la hora esta entre los valores correspondientes la establece, lo mismo con los minutos
+	 * Constructor que cpmprueba la hora y los minutos si estan en los valores correctos establecidos y en caso correcto construye el objeto
 	 * @param hora
 	 * @param minuto
 	 */
-	// Comprobar en el constructor
 	public Hora(int hora, int minuto) {
 		if (hora >= 0 && hora <= 23) {
 			this.hora = hora;
@@ -45,7 +54,7 @@ public class Hora {
 		return valido;
 	}
 	/**
-	 * Si los minutos son mayores a 1 o menor= a 59 los establce, en caso contrario se quedan por defecto
+	 * En caso de estar en los valores correctos establece el valor del minuto
 	 * @param minuto
 	 * @return Si es valido establecer el minuto
 	 */
@@ -74,7 +83,7 @@ public class Hora {
 
 	@Override
 	/**
-	 * Muestra la hora y los minutos en un presentable formato
+	 * Muestra la hora y los minutos en un formato presentable 
 	 */
 	public String toString() {
 		return  hora +":"+ minuto;

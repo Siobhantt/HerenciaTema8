@@ -1,5 +1,8 @@
 package ej1;
-
+/**
+ * Hereda de hora pero con el atributo de segundos añadido
+ * @author Luisa
+ */
 public class HoraExacta extends Hora {
 	/**
 	 * Atributo segundo
@@ -23,7 +26,6 @@ public class HoraExacta extends Hora {
 		return segundos;
 	}
 	/**
-	 * Establece el segundo en caso de ser mayor que 0 o menor = a 59
 	 * @param segundos
 	 */
 	public void setSegundos(int segundos) {
