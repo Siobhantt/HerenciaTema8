@@ -1,5 +1,9 @@
 package ej2;
-
+/**
+ * Clase que hereda de empleado y representa un operario
+ * @author Luisa
+ *
+ */
 public class Operario extends Empleado {
 /**
  * Operario hereda de emplado entonces, en el constructor lleva el nombre
@@ -9,9 +13,12 @@ public class Operario extends Empleado {
 	public Operario(String nombre) {
 		super(nombre);
 	}
+	/**
+	 * Metodo to String que representa la herencia de emplaedo a operario
+	 */
 	@Override
 	public String toString() {
-		//Esto imprime el to string de la clase padre mas lo nuevo que se le añada.
+		
 		return  super.toString() +" -> Operario";
 	}
 
