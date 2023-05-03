@@ -21,7 +21,6 @@ public class Electrodomestico {
 	 * Atributo de Enumerado Consumo
 	 */
 	public Consumo consumo;
-
 	/**
 	 * Enumerado Color
 	 */
@@ -34,7 +33,6 @@ public class Electrodomestico {
 	public enum Consumo {
 		A, B, C, D, E, F
 	}
-
 	/**
 	 * Contructor sin parametros(Establece ciertos parametros por defecto)
 	 */
@@ -121,7 +119,6 @@ public class Electrodomestico {
 	public void setConsumo(Consumo consumo) {
 		this.consumo = consumo;
 	}
-
 	/**
 	 * Comprueba que el atributo de consumo este en los valores valorados
 	 * @param letra

@@ -5,7 +5,7 @@ import ej4.Electrodomestico.Consumo;
 
 public class MainCacharros {
 	static Electrodomestico[] arrayCacharros = new Electrodomestico[10];
-
+//Prueba
 	public static void main(String[] args) {
 		double precioF=0;
 		double precioB=0;
